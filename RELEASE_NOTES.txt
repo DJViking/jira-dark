@@ -1,4 +1,6 @@
 RELEASE NOTES:
+03-05-2017: Slightly darker background colors, various tweaks for badges, headers, and icons, primarily in the Agile view(s).
+11-02-2017: Fixed JIRA 7 Agile issues.
 21-07-2016: Disabled for regexp(".*jira.*"), only prefix match left.
 11-12-2015: Enabled for regexp(".*jira.*")
 24-11-2015: Tempo: fixed worklog edit form actions.
