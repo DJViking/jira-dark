@@ -2,18 +2,22 @@
 body,html {min-height: 100%!important; }
 
 html, body{background-color:#111!important}
-body>*:not(:empty){background-color:#222!important}
-body>*>*:not(:empty){background-color:#222!important}
-body>*>*>*:not(:empty){background-color: transparent}
-body>*>*>*>*:not(:empty){background-color:#181818!important;text-shadow:none;}
-body>*>*>*>*>*:not(:empty){background-color:#181818!important}
-body>*>*>*>*>* *:not([class^="tm-label-circle"]):not([class^="tm-status-dropdown"]):not([class^="ghx-grabber"]):not([class*="ghx-active"]):not([class*="aui-icon"]):not([class*="aui-badge"]){
+body>*:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]){background-color:#222!important}
+body>*>*:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]){background-color:#222!important}
+body>*>*>*:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]){background-color: transparent}
+body>*>*>*>*:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]){background-color:#181818!important;text-shadow:none;}
+body>*>*>*>*>*:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]){background-color:#181818!important}
+body>*>*>*>*>* *:not([class^="tm-label-circle"]):not([class^="tm-status-dropdown"]):not([class^="ghx-grabber"]):not([class*="ghx-active"]):not([class*="aui-icon"]):not([class*="aui-badge"]):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]):not([class*="progressbar__entry"]):not([class*="progressbar"]):not([class*="progressbar_full"]):not([class*="progressbar-container"]){
     background-color:#181818!important;
     text-shadow:none;
 }
 /* Growl messages in top-right*/
 .aui-message{
     background-color:#181818!important;
+}
+
+#content .aui-sidebar+.aui-page-header, #content .aui-sidebar-submenu+.aui-page-header{
+	background-color:#181818!important;
 }
 /* Dropdown button icons */
 .aui-button.aui-button.ghx-dropdown-trigger:after{
@@ -35,13 +39,12 @@ body>*>*>*>*>* *:not([class^="tm-label-circle"]):not([class^="tm-status-dropdown
 .ghx-controls-filters.js-quickfilter-selector .js-quickfilter-button.ghx-active{
     background-color: #1b4673!important
 }
-
 body table:not(:empty){background-color:#282828!important}
 body table>tbody>tr:nth-child(even){background-color:rgba(0,0,0,.2)!important}
 body table>tbody>tr>td:nth-child(odd){background-color:rgba(0,0,0,.1)!important}
-body *:empty:not([class*="icon"]):not([class^="tm-"]):not([class^="ghx-grabber"]){background-color: #111!important}
+body *:empty:not([class*="icon"]):not([class^="tm-"]):not([class^="ghx-grabber"]):not(canvas):not([class*="progressbar__entry"]){background-color: #111!important}
 
-body p:not(:empty), body p *, body h1, body h1 *, body h2, body h2 *, body h3, body h3 *, body h4, body h4 *, body h5, body h5 *, body strong>*, body b>*, body em>*, body i>*,  body span>*:not(img){background:transparent none!important}
+body p:not(:empty), body p *, body h1, body h1 *, body h2, body h2 *, body h3, body h3 *, body h4, body h4 *, body h5, body h5 *, body strong>*, body b>*, body em>*, body i>*,  body span>*:not(img):not([class*=js-card-color-edit]){background:transparent none!important}
 body h1, body h1 *, body h2, body h2 *, p>strong:only-of-type,  p>b:only-of-type{color: #a98!important}
 body h3, body h3 *, body h4, body h4 *{color: #aaa!important}
 
@@ -52,8 +55,6 @@ body hr{background: #666 none!important; color: #666!important; border:1px solid
 * body a, body a *{color: #B6AA7B!important;}
 /* body a:visited, body a:visited *{color: #666!important;} */
 body a:hover, body a:hover *{color: #D9C077!important; text-decoration: underline!important}
-body img,a[href] img, a[href] button, input[type="image"],*[onclick]:empty, body a:empty{opacity:.5!important}
-body img:hover,a[href]:hover img, a[href]:hover button, *[onclick]:empty:hover, body a:empty:hover{opacity:1!important}
 
 body span>img{visibility:visible!important}
 
