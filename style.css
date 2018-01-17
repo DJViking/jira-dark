@@ -11,6 +11,12 @@ body>*>*>*>*>* *:not([class^="tm-label-circle"]):not([class^="tm-status-dropdown
     background-color:#181818!important;
     text-shadow:none;
 }
+
+/** Inline Rich Editors */
+body#tinymce{
+    background-color:#181818!important;
+    text-shadow:none;
+}
 /* Growl messages in top-right*/
 .aui-message{
     background-color:#181818!important;
