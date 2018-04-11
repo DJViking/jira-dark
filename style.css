@@ -11,6 +11,26 @@ body>*>*>*>*>* *:not([class^="tm-label-circle"]):not([class^="tm-status-dropdown
     background-color:#181818!important;
     text-shadow:none;
 }
+#ghx-pool div.ghx-selected > .ghx-issue-content,
+#ghx-pool div.ghx-selected > .ghx-issue-content div,
+#ghx-pool div.ghx-selected > .ghx-issue-content span,
+#ghx-pool div.ghx-selected > .ghx-issue-content > .ghx-extra-fields,
+#content > div.aui-sidebar.projects-sidebar.fade-in > div > div.aui-sidebar-body > nav > div > div > ul > li.aui-nav-selected > a,
+#ghx-content-group > div.ghx-sprint-group div.js-issue.ghx-selected div,
+#ghx-content-group > div.ghx-sprint-group div.js-issue.ghx-selected span
+{
+    background-color:#292929!important;
+}
+
+#ghx-content-group > div.ghx-sprint-group div.js-issue.ghx-selected.ghx-selected-primary div,
+#ghx-content-group > div.ghx-sprint-group div.js-issue.ghx-selected.ghx-selected-primary span
+{
+    background-color: #333!important;
+}
+
+.ghx-backlog-container .ghx-backlog-header {
+    border: 1px dashed transparent;
+}
 
 /** Inline Rich Editors */
 body#tinymce{
