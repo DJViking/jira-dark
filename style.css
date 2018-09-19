@@ -1,4 +1,4 @@
-@-moz-document url-prefix("http://jira"), url-prefix("https://jira"), domain("jira.atlassian.com") {
+@-moz-document url-prefix("http://jira"), url-prefix("https://jira"), domain("jira.atlassian.com"), domain("broadvoice-jira.atlassian.net") {
 body,
 html {
     min-height: 100%!important;
@@ -97,20 +97,21 @@ body > * > *:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([cla
 body > * > * > *:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]) {
     background-color: transparent
 }
-body > * > * > * > *:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]) {
+body > * > * > * > *:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]):not([class*="issue-drop-zone"]) {
     background-color: #181818!important;
     text-shadow: none;
 }
-body > * > * > * > * > *:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]) {
+body > * > * > * > * > *:not(:empty):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]):not([class*="issue-drop-zone"]) {
     background-color: #181818!important
 }
-body > * > * > * > * > * *:not([class^="tm-label-circle"]):not([class^="tm-status-dropdown"]):not([class^="ghx-grabber"]):not([class*="ghx-active"]):not([class*="aui-icon"]):not([class*="aui-badge"]):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]):not([class*="progressbar__entry"]):not([class*="progressbar"]):not([class*="progressbar_full"]):not([class*="progressbar-container"]) {
+body > * > * > * > * > * *:not([class^="tm-label-circle"]):not([class^="tm-status-dropdown"]):not([class^="ghx-grabber"]):not([class*="ghx-active"]):not([class*="aui-icon"]):not([class*="aui-badge"]):not(canvas):not([class*="js-card-color-edit"]):not([class*="colorpicker"]):not([class*="progressbar__entry"]):not([class*="progressbar"]):not([class*="progressbar_full"]):not([class*="progressbar-container"]):not([class*="ghx-days"]):not([class*="issue-drop-zone"]):not([class*="toolbar-item"]):not([class*="toolbar-trigger"]) {
     background-color: #181818!important;
     text-shadow: none;
 }
 .aui-label{
     text-shadow: none!important;
 }
+
 ul.labels li .lozenge {
     overflow: hidden;
 }
@@ -130,7 +131,15 @@ ul.labels li .lozenge {
     border-color: #ffd351!important;
 }
 
-
+#ghx-pool div.ghx-selected,
+#ghx-pool div.ghx-selected > .ghx-summary,
+#ghx-pool div.ghx-selected > .ghx-extra-fields,
+#ghx-pool div.ghx-selected > .ghx-extra-fields div,
+#ghx-pool div.ghx-selected > .ghx-extra-fields div span,
+#ghx-pool div.ghx-selected > .ghx-stat-fields,
+#ghx-pool div.ghx-selected > .ghx-stat-fields .ghx-row,
+#ghx-pool div.ghx-selected > .ghx-stat-fields a,
+#ghx-pool div.ghx-selected > .ghx-stat-fields .ghx-field,
 #ghx-pool div.ghx-selected > .ghx-issue-content,
 #ghx-pool div.ghx-selected > .ghx-issue-content div,
 #ghx-pool div.ghx-selected > .ghx-issue-content span,
@@ -145,6 +154,12 @@ ul.labels li .lozenge {
 #ghx-content-group > div.ghx-sprint-group div.js-issue.ghx-selected.ghx-selected-primary span:not(.aui-label) {
     background-color: #333!important;
 }
+
+/** Flagged Issue Card (Agile) */
+#ghx-pool div.ghx-issue.ghx-flagged{
+    border: 2px dotted #ffee00;
+}
+
 .ghx-backlog-container .ghx-backlog-header {
     border: 1px dashed transparent;
 }
@@ -204,8 +219,23 @@ body#tinymce {
 }
 
 /* Agile Poker */
-.agile-estimates-container .voting-select-button[is-selected]{
+/* Async Estimation - Selected Point Value Voting Button */
+#app > div > div > nav > .session-layout-issue > div > div.session-layout-issue-details .voting-select-button[is-selected]{
+    background-color: #565656!important;
+    border-width: 2px;
+    border-color: #999!important;
+}
+
+/* Issue Details - Dot Context Menu (hit .) */
+.shifter-dialog #shifter-dialog-suggestions .aui-list-item.active > a {
     background-color: #383838!important;
+}
+
+/* Issue Details - Inline Editable fields on Hover (fixes light bg on hover)*/
+#issue-content .overlay-icon {
+    background: #333;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
 }
 
 body table:not(:empty) {
@@ -217,7 +247,7 @@ body table > tbody > tr:nth-child(even) {
 body table > tbody > tr > td:nth-child(odd) {
     background-color: rgba(0, 0, 0, .1)!important
 }
-body *:empty:not([class*="icon"]):not([class^="tm-"]):not([class^="ghx-grabber"]):not(canvas):not([class*="progressbar__entry"]) {
+body *:empty:not([class*="icon"]):not([class^="tm-"]):not([class^="ghx-grabber"]):not(canvas):not([class*="progressbar__entry"]):not([class*="issue-drop-zone"]) {
     background-color: #111!important
 }
 body p:not(:empty),
@@ -236,7 +266,7 @@ body strong > *,
 body b > *,
 body em > *,
 body i > *,
-body span > *:not(img):not([class*=js-card-color-edit]) {
+body span > *:not(img):not([class*=js-card-color-edit]):not([class*=aui-icon]):not([class*="ghx-days"]):not([class*="issue-drop-zone"]) {
     background: transparent none!important
 }
 body h1,
